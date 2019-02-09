@@ -9,6 +9,8 @@
 || add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
 || Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
 || Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
+|| count: Finds number of persons in the address book
+|| Example: count
 || delete: Deletes the person identified by the index number used in the last person listing.
 || Parameters: INDEX
 || Example: delete 1
@@ -230,8 +232,11 @@
 || Enter command: || [Command entered:  find Charlie Betsy]
 || 	1. Betsy Choo Tags: [secretive]
 || 	2. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
-|| 
+||
 || 2 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  count]
+|| 5 persons in the address book
 || ===================================================
 || Enter command: || [Command entered:  delete]
 || Invalid command format! 

@@ -37,6 +37,16 @@ public class Command {
     }
 
     /**
+     * Constructs a feedback message to summarise an operation that displayed the total number of persons.
+     *
+     * @param  personCount
+     * @return summary message for total number of persons
+     */
+    public static String getMessageForPersonCount(int personCount) {
+        return String.format(Messages.MESSAGE_PERSONS_COUNT, personCount);
+    }
+
+    /**
      * Executes the command and returns the result.
      */
     public CommandResult execute(){
