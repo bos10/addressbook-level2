@@ -1,6 +1,8 @@
 package seedu.addressbook.commands;
 
-//import seedu.addressbook.data.AddressBook;
+import seedu.addressbook.data.person.ReadOnlyPerson;
+
+import java.util.List;
 
 public class CountCommand extends Command {
 
@@ -9,21 +11,16 @@ public class CountCommand extends Command {
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds number of persons in the address book\n"
             + "Example: " + COMMAND_WORD;
 
-    private final int count;
+    private int count =0;
 
-    public CountCommand{
-        this.count = -1;
-    }
-
-    public int getNumPersonInBook(){
-        this.count = addressBook.getAllPersons().size();
+    public int getCount(){
         return this.count;
     }
-
-
     @Override
     public CommandResult execute() {
-        return new CommandResult(getMessageForPersonCount(getNumPersonInBook()));
+        List<ReadOnlyPerson> allPersons = addressBook.getAllPersons().immutableListView();  // get arraylist of all persons
+        this.count =  allPersons.size();
+        return new CommandResult(getMessageForPersonCount(getCount()));
     }
 
 }
