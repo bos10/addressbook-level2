@@ -28,7 +28,7 @@ public class CountCommandTest {
 
         // Test Case 1 : 0 persons
         addressBook = TestUtil.createAddressBook(a,b);
-        String expectedMessage = String.format(Messages.MESSAGE_PERSONS_COUNT, 0);
+        String expectedMessage = String.format(Messages.MESSAGE_PERSONS_COUNT, 2);
 
         CountCommand countCmd = new CountCommand();
         countCmd.setData(addressBook, EMPTY_LIST_PLACEHOLDER);
