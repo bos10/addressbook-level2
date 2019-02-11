@@ -111,7 +111,7 @@ public class ViewCommandTest {
         ReadOnlyPerson personToBeViewed = relevantPersons.get(targetVisibleIndex - 1);
 
         String expectedMessage = String.format(ViewCommand.MESSAGE_VIEW_PERSON_DETAILS,
-                personToBeViewed.getAsTextHidePrivate);
+                                                personToBeViewed.getAsTextHidePrivate());
         assertViewBehavior(new ViewCommand(targetVisibleIndex), addressBook, relevantPersons, expectedMessage);
 
         expectedMessage = String.format(ViewAllCommand.MESSAGE_VIEW_PERSON_DETAILS,
